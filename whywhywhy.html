@@ -539,7 +539,7 @@
         // Load manifest
         async function loadManifest() {
             try {
-                const response = await fetch('/data/manifest.json');
+                const response = await fetch('why/data/manifest.json');
                 if (!response.ok) throw new Error('Failed to load manifest');
                 manifest = await response.json();
             } catch (error) {
@@ -626,7 +626,7 @@
             hideError();
             
             try {
-                const response = await fetch(`/data/${course.dataFile}`);
+                const response = await fetch(`why/data/${course.dataFile}`);
                 if (!response.ok) throw new Error('Failed to load course data');
                 
                 currentCourseData = await response.json();
